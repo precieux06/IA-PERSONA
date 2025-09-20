@@ -1,16 +1,21 @@
 services:
   - type: web
-    name: ia-persona-backend
+    name: multimodal-backend
     env: docker
-    repo: https://github.com/precieux06/IA-PERSONA
-    branch: main
-    dockerfilePath: backend/Dockerfile
-    autoDeploy: true
+    rootDir: backend
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: 5000
 
   - type: web
-    name: ia-persona-frontend
+    name: multimodal-frontend
     env: docker
-    repo: https://github.com/precieux06/IA-PERSONA
-    branch: main
-    dockerfilePath: frontend/Dockerfile
-    autoDeploy: true
+    rootDir: frontend
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        value: https://multimodal-backend.onrender.com
+        

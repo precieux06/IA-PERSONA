@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+openai
+aiofiles
+python-multipart
+gunicorn

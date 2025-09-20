@@ -1,0 +1,1 @@
+# IA-multimodale-starter\n\nProjet multimodal complet avec FastAPI + Next.js + Docker.\n
